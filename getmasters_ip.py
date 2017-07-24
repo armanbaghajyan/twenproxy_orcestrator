@@ -3,7 +3,7 @@ import os
 
 def redis_sentinel_connection():
     try:
-        redis_db = redis.StrictRedis(host="192.168.0.194", port=26379)
+        redis_db = redis.StrictRedis(host="", port=)
     except:
         print("Cant Connect to Redis Server")
         raise
@@ -41,7 +41,7 @@ def make_conf_file():
     with open("D:\Python\Twemproxy_orcestrator\\nutcracker.yml", "w") as f:
         f.write("""
 redis_test_configuration:
-    listen: 0.0.0.0:22121
+    listen: 
     client_connections: 2
     hash: fnv1a_64
     hash_tag: "{}"
@@ -50,7 +50,7 @@ redis_test_configuration:
     preconnect: true
     auto_eject_hosts: true
     redis: true
-    redis_auth: 8@#456qweDFGik
+    redis_auth: 
     server_retry_timeout: 2000
     server_failure_limit: 1
     servers:\n""")

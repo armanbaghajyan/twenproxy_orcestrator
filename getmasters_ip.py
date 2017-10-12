@@ -29,16 +29,16 @@ def get_masters():
 
 def write_ip_file():
     list_ip = get_masters()
-    with open("D:\Python\Twemproxy_orcestrator\ipaddr.txt", "w") as f:
+    with open("D:\\Python\\Twemproxy_orcestrator\\ipaddr.txt", "w") as f:
         f.writelines(",".join(list_ip))
 
 def read_ip_file():
-    with open("D:\Python\Twemproxy_orcestrator\ipaddr.txt", "r") as f:
+    with open("D:\\Python\\Twemproxy_orcestrator\\ipaddr.txt", "r") as f:
         return f.readline()
 
 
 def make_conf_file():
-    with open("D:\Python\Twemproxy_orcestrator\\nutcracker.yml", "w") as f:
+    with open("D:\\Python\\Twemproxy_orcestrator\\nutcracker.yml", "w") as f:
         f.write("""
 redis_test_configuration:
     listen: 
